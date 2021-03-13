@@ -48,7 +48,7 @@ export const GET_MANDATAIRES = gql`
   ) {
     count: view_mesure_gestionnaire_aggregate(
       where: {
-        gestionnaire_tis: { ti_id: { _eq: $tribunal } }
+        # gestionnaire_tis: { ti_id: { _eq: $tribunal } }
         discriminator: { _eq: $discriminator }
       }
     ) {
@@ -62,7 +62,7 @@ export const GET_MANDATAIRES = gql`
       order_by: $orderBy
       where: {
         discriminator: { _eq: $discriminator }
-        ti_id: { _eq: $tribunal }
+        # ti_id: { _eq: $tribunal }
         gestionnaire: { nom: { _ilike: $searchText } }
       }
     ) {
